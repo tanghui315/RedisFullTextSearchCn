@@ -1,4 +1,4 @@
-﻿<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
+﻿<?php 
 /**
 **  create by tanghui 
 **  create datetime 2014/7/23 14:00
@@ -12,8 +12,8 @@ class MyRedisSc{
 	  $CI =& get_instance();
 	 
 	  $this->redis = new Redis();
-      $this->redis->connect($CI->config->item('redis_ip'),$CI->config->item('redis_port'));
-      $this->redis->select(0);
+      	  $this->redis->connect("127.0.0.1"); //the host ip  
+          $this->redis->select(0);
 	  $this->cws=scws_new();
 	  $this->cws->set_charset('utf8');
 	  $this->cws->set_dict(dirname(__FILE__).'/../../scws/dict.utf8.xdb');
