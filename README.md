@@ -5,6 +5,8 @@ chinese full test search engine  for redis .   it's able to fuzzy search .
 
 this is the class with PHP
 
+before use the class,you must to install two php extends php_redis and php_scws .
+
 For example:
 
 $r=new MyRedisSc();
